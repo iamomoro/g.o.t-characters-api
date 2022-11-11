@@ -16,7 +16,7 @@ componentDidMount() {
         const options = {
             method: 'GET',
             url: 'https://game-of-thrones1.p.rapidapi.com/Characters',
-            params: {limit: '20', page: '2'},
+            params: {limit: '10', page: '1'},
             headers: {
                 'X-RapidAPI-Key': 'fa0828195cmsh9f824b0cab82622p1c348ajsnc8b29806bee2',
                 'X-RapidAPI-Host': 'game-of-thrones1.p.rapidapi.com'
@@ -24,19 +24,22 @@ componentDidMount() {
           };
           
           axios.request(options)
-          .then((response) => {
+          .then((response) => {             
               this.setState({usersCollection : response.data})
               console.log(response.data);
           }).catch(function (error) {
               console.error(error);
           });
 }
+
   
 dataTable() {
   return this.state.usersCollection.map((data, i) => {
       return <CharacterCard obj={data} key={i} />;
   });
 }
+
+
 
 render() {
   return (

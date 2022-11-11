@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+
 
 class CharacterCard extends Component {
   render() {
@@ -16,15 +16,15 @@ class CharacterCard extends Component {
           <div className="ml-[22px] text-[#000] font-bold mt-[11px] pb-[10px] bg-[] space-x-2 flex align-middle uppercase">
             <span>Name: </span> {this.props.obj.fullName}
           </div>
-          <div className="space-x-2 flex items-center align-middle font-bold uppercase">
-            <button className="ml-[22px] p-4 w-48 uppercase ">Family:</button>
-            <button className="ml-[22px] p-4 w-48 text-white bg-[#D4AF37] text-xl rounded-full uppercase ">
+          <div className="space-x-2 flex items-center align-middle font-bold">
+            <button className="ml-[22px] p-4 w-48 capitalize">Family:</button>
+            <button className="ml-[22px] p-4 w-48 text-white bg-[#D4AF37] text-xl rounded-full capitalize">
               {this.props.obj.family}
             </button>
           </div>
           <div className="space-x-2 flex items-center align-middle font-bold">
-            <button className="ml-[22px] p-4 w-48 uppercase ">Titile</button>
-            <button className="ml-[22px] p-4 w-48 text-white bg-[#000000] text rounded-full uppercase">
+            <button className="ml-[22px] p-4 w-48 capitalize">Titile</button>
+            <button className="ml-[22px] p-4 w-48 text-white bg-[#000000] text rounded-full capitalize">
               {this.props.obj.title}
             </button>
           </div>

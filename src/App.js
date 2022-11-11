@@ -8,7 +8,7 @@ function App() {
       {/* <CharacterCard /> */}
       <Characters/>
     </div>
-  );
-}
-
+  ); 
+  }
 export default App;
+  
